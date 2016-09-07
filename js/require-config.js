@@ -22,7 +22,7 @@ requirejs.config({
         }
         router:{
             steps:['angular'],
-            output:'router'
+            exports:'router'
         }
     }
 });

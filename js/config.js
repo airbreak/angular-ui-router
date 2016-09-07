@@ -23,7 +23,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             }
         })
         .state('index.usermng',{
-            // url:'/usermng',
+            url:'/usermng',
             views:{
                 'main@index':{
                     templateUrl:'pages/usermng.html',
@@ -44,7 +44,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 
 
         .state('index.usermng.hightendusers',{
-             url:'/usermng/hightendusers' ,
+             url:'/hightendusers' ,
              views:{
                 'userMain@index.usermng':{
                     templateUrl:'pages/hightendusers.html'
@@ -52,7 +52,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             }
         })
         .state('index.usermng.normalusers',{
-             url:'/usermng/normalusers' ,
+             url:'/normalusers' ,
              views:{
                 'userMain@index.usermng':{
                     templateUrl:'pages/normalusers.html'
@@ -60,7 +60,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             } 
         })
         .state('index.usermng.slowusers',{
-             url:'/usermng/slowusers' ,
+             url:'/slowusers' ,
              views:{
                 'userMain@index.usermng':{
                     templateUrl:'pages/slowusers.html'
