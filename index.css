@@ -17,7 +17,7 @@ a{
 .topbar-item{
     list-style: none;
     display: inline-block;
-    width: 70px;
+    padding:0 20px;
     height: 20px;
     margin: 15px 5px;
     text-align: center;
@@ -26,7 +26,7 @@ a{
 
 }
 .topbar-item a:hover{
-    color: #B92672;
+    color: #4B8BF5;
 }
 .topbar-item a{
     text-decoration: none;
@@ -34,7 +34,7 @@ a{
 }
 .container{
     height: 100%;
-    width: :100%;
+    width:100%;
 }
 .topbar{
     width: 100%;
@@ -60,8 +60,13 @@ a{
     top: 0;
     bottom: 0;
     height: 600px;
-    width: 320px;
+    width: 240px;
     background-color: #fff;
+}
+.left-bar p{
+    font-size: 18px;
+    padding-left: 20px;
+    color:#3b3d40;
 }
 .left-bar ul{
     width: 80%;
@@ -80,7 +85,28 @@ a{
 }
 
 .user-main{
-    margin-left:320px; 
+    margin-left:240px;
     height: 600px;
     background-color: #808080;
+}
+
+.normal-word{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    color: #4B8BF5;
+    font-size: 16px;
+}
+.tips-word{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
 }

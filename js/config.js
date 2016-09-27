@@ -22,56 +22,63 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
                 },              
             }
         })
-        .state('index.usermng',{
-            // url:'/usermng',
+        .state('usermng',{
+            url:'/usermng',
             views:{
-                'main@index':{
-                    templateUrl:'pages/usermng.html',
-                    // controller:function ($scope,$state) {
-                    //     $scope.addUserType=function(argument) {
-                    //         $state.go('index.usermng.addUserType');
-                    //     }
-                    // }
+                '':{
+                    templateUrl:'pages/index.html'
                 },
-                'leftBar@index.usermng':{
+                'topbar@usermng':{
+                    templateUrl:'pages/nav.html'
+                },
+                'main@usermng':{
+                    templateUrl:'pages/usermng.html',
+                },
+                'leftBar@usermng':{
                    templateUrl:'pages/leftbar.html'
                 },
-                'userMain@index.usermng':{
-                   templateUrl:'pages/userwelcome.html'
+                'userMain@usermng':{
+                   templateUrl:'pages/hightendusers.html'
                 },
             }
         })
 
 
-        .state('index.usermng.hightendusers',{
-             url:'/usermng/hightendusers' ,
+        .state('usermng.hightendusers',{
+             url:'/hightendusers' ,
              views:{
-                'userMain@index.usermng':{
+                'userMain@usermng':{
                     templateUrl:'pages/hightendusers.html'
                 }
             }
         })
-        .state('index.usermng.normalusers',{
-             url:'/usermng/normalusers' ,
+        .state('usermng.normalusers',{
+             url:'/normalusers' ,
              views:{
-                'userMain@index.usermng':{
+                'userMain@usermng':{
                     templateUrl:'pages/normalusers.html'
                 }
             } 
         })
-        .state('index.usermng.slowusers',{
-             url:'/usermng/slowusers' ,
+        .state('usermng.slowusers',{
+             url:'/slowusers' ,
              views:{
-                'userMain@index.usermng':{
+                'userMain@usermng':{
                     templateUrl:'pages/slowusers.html'
                 }
             } 
         })
-        .state('index.settings',{
+        .state('settings',{
             url:'/settings',
             views:{
-                'main@index':{
-                    template:'这是系统设置'
+                '':{
+                    templateUrl:'pages/index.html'
+                },
+                'topbar@settings':{
+                    templateUrl:'pages/nav.html'
+                },
+                'main@settings':{
+                    template:'<div class="normal-word">这是系统设置</div>'
                 }
             }
         });
