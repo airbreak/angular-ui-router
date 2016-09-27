@@ -43,7 +43,6 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             }
         })
 
-
         .state('usermng.hightendusers',{
              url:'/hightendusers' ,
              views:{
