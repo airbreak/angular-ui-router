@@ -12,7 +12,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url:'/index',
             views:{
                 '':{
-                    templateUrl:'pages/index.html'
+                    templateUrl:'pages/main.html'
                 },
                 'topbar@index':{
                     templateUrl:'pages/nav.html'
@@ -26,19 +26,19 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url:'/usermng',
             views:{
                 '':{
-                    templateUrl:'pages/index.html'
+                    templateUrl:'pages/main.html'
                 },
                 'topbar@usermng':{
                     templateUrl:'pages/nav.html'
                 },
                 'main@usermng':{
-                    templateUrl:'pages/usermng.html',
+                    templateUrl:'pages/usermng/usermng.html',
                 },
                 'leftBar@usermng':{
-                   templateUrl:'pages/leftbar.html'
+                   templateUrl:'pages/usermng/leftbar.html'
                 },
                 'userMain@usermng':{
-                   templateUrl:'pages/hightendusers.html'
+                   templateUrl:'pages/usermng/hightendusers.html'
                 },
             }
         })
@@ -47,7 +47,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
              url:'/hightendusers' ,
              views:{
                 'userMain@usermng':{
-                    templateUrl:'pages/hightendusers.html'
+                    templateUrl:'pages/usermng/hightendusers.html'
                 }
             }
         })
@@ -55,7 +55,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
              url:'/normalusers' ,
              views:{
                 'userMain@usermng':{
-                    templateUrl:'pages/normalusers.html'
+                    templateUrl:'pages/usermng/normalusers.html'
                 }
             } 
         })
@@ -63,7 +63,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
              url:'/slowusers' ,
              views:{
                 'userMain@usermng':{
-                    templateUrl:'pages/slowusers.html'
+                    templateUrl:'pages/usermng/slowusers.html'
                 }
             } 
         })
@@ -71,7 +71,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             url:'/settings',
             views:{
                 '':{
-                    templateUrl:'pages/index.html'
+                    templateUrl:'pages/main.html'
                 },
                 'topbar@settings':{
                     templateUrl:'pages/nav.html'
