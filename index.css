@@ -26,6 +26,9 @@ a{
 
 }
 .topbar-item a:hover{
+    color: red;
+}
+.topbar-item.selected a{
     color: #4B8BF5;
 }
 .topbar-item a{
@@ -77,13 +80,30 @@ a{
     width: 100%;
     list-style: none;
     margin: 15px 0;
+    position: relative;
+}
+
+.left-bar ul li.selected ::before{
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 2px;
+    background-color:#4B8BF5; 
+    position: absolute;
+    left:0px;
+    top:2px;
+    padding: 0px;
 }
 .left-bar ul li a{
     display: block;
     width: 100%;
     height: 100%;
+    margin-left: 20px;
 }
+.left-bar ul li.selected a{
+    color: #4B8BF5;
 
+}
 .user-main{
     margin-left:240px;
     height: 600px;

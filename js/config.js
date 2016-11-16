@@ -3,6 +3,47 @@ var routerApp=angular.module('routerApp',['ui.router']);
 routerApp.run(function($rootScope, $state, $stateParams) {
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
+
+    /*菜单选中样式*/
+    $rootScope.$on('$locationChangeSuccess', function(e) {
+        e.preventDefault();
+        var url1=window.location.href.replace(/.*index\.html#\//,''),
+            type=url1.replace(/\/.*/,'');
+           
+            index=0,
+            userTabsIndex=0;
+        switch(type){
+            case 'index':
+                index=0;
+                break;
+            case 'usermng':
+                index=1;
+                var  userTabsType=url1.replace(/.*\//,'');
+                switch(userTabsType){
+                    case 'hightendusers':
+                        userTabsIndex=0;
+                        break;
+                    case 'normalusers':
+                        userTabsIndex=1;
+                        break
+                    case 'slowusers':
+                        userTabsIndex=2;
+                        break;
+                    default:
+                        userTabsIndex=0
+                        break;
+                    }
+                break;
+            case 'settings':
+                index=2;
+                break;
+            default:
+                index=0
+                break;
+        }
+        $rootScope.selecteIndex=index;
+        $rootScope.userMenuTabsIndex=userTabsIndex;
+    });
 });
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
